@@ -20,9 +20,9 @@ int find_max_index(int n, float arr[])
         { 
             max_index = i; 
         }
- } 
- printf("Maximum value of element is %.2f and it's index is %d", arr[max_index], max_index); 
- return max_index; 
+    } 
+    printf("Maximum value of element is %.2f and it's index is %d", arr[max_index], max_index); 
+    return max_index; 
 } 
 
 
@@ -34,17 +34,16 @@ void output(int n, float arr[])
         printf("%.2f ", arr[i]); 
     } 
     printf("\n"); 
-    } 
-
+} 
 
 int main() 
-    { 
-        int n; 
-        printf("Enter n:"); 
-        scanf("%d",&n); 
-        float arr[n]; 
-        input(n, arr); 
-        output(n, arr); 
-        find_max_index(n, arr); 
-        return 0; 
-    }
+{ 
+    int n; 
+    printf("Enter n:"); 
+    scanf("%d",&n); 
+    float arr[n]; 
+    input(n, arr); 
+    output(n, arr); 
+    find_max_index(n, arr); 
+    return 0; 
+}
