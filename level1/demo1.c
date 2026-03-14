@@ -37,7 +37,7 @@ void output(int n, float arr[])
     } 
 
 
-    int main() 
+int main() 
     { 
         int n; 
         printf("Enter n:"); 
