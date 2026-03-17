@@ -51,3 +51,5 @@ void output(float max, float min){
     printf("Maximum temperature: %.2f\n", max);
     printf("Minimum temperature: %.2f", min);
 }
+
+
