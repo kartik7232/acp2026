@@ -18,43 +18,152 @@ Reading symbols from demo5...
 Breakpoint 1 at 0x401477: file demo5.c, line 10.
 (gdb) run
 Starting program: D:\OneDrive\Desktop\acp2026\level1\demo5.exe 
-[New Thread 1272.0x42e0]
+[New Thread 10492.0x3744]
 
 Thread 1 hit Breakpoint 1, 0x00401477 in main () at demo5.c:10
 10	int main() {
 (gdb) next
 13	    printf("Enter size of arrays: ");
-(gdb) print n
-$1 = 6422280
 (gdb) next
 14	    scanf("%d", &n);
+(gdb) print n
+$1 = 6422280
 (gdb) next
 16	    int a[n], b[n];
 (gdb) next
 18	    printf("Enter elements of first array:\n");
-(gdb) print n
-$2 = 3
-(gdb) 3 1
+(gdb) 1
 (gdb) next
 19	    read_array(n, a);
+(gdb) step
+read_array (n=3, arr=0x61fedc) at demo5.c:41
+41	    for (int i = 0; i < n; i++) {
 (gdb) next
+42	        scanf("%d", &arr[i]);
+(gdb) next
+41	    for (int i = 0; i < n; i++) {
+(gdb) next
+42	        scanf("%d", &arr[i]);
+(gdb) next
+41	    for (int i = 0; i < n; i++) {
+(gdb) next
+42	        scanf("%d", &arr[i]);
+(gdb) next
+41	    for (int i = 0; i < n; i++) {
+(gdb) next
+44	}
+(gdb) next
+main () at demo5.c:21
 21	    printf("Enter elements of second array:\n");
-(gdb) 3
 (gdb) next
 22	    read_array(n, b);
-(gdb) n next
+(gdb) step
+read_array (n=3, arr=0x61fecc) at demo5.c:41
+41	    for (int i = 0; i < n; i++) {
+(gdb) next
+42	        scanf("%d", &arr[i]);
+(gdb) next
+41	    for (int i = 0; i < n; i++) {
+(gdb) next
+42	        scanf("%d", &arr[i]);
+(gdb) next
+41	    for (int i = 0; i < n; i++) {
+(gdb) next
+42	        scanf("%d", &arr[i]);
+(gdb) next
+41	    for (int i = 0; i < n; i++) {
+(gdb) next
+44	}
+(gdb) next
+main () at demo5.c:24
 24	    printf("Before swapping:\n");
 (gdb) next
 25	    printf("Array 1: ");
+(gdb) print
+$2 = 6422280
 (gdb) next
 26	    print_array(n, a);
+(gdb) step
+print_array (n=3, arr=0x61fedc) at demo5.c:46
+46	    for (int i = 0; i < n; i++) {
 (gdb) next
+47	        printf("%d ", arr[i]);
+(gdb) next
+46	    for (int i = 0; i < n; i++) {
+(gdb) next
+47	        printf("%d ", arr[i]);
+(gdb) next
+46	    for (int i = 0; i < n; i++) {
+(gdb) next
+47	        printf("%d ", arr[i]);
+(gdb) next
+46	    for (int i = 0; i < n; i++) {
+(gdb) next
+49	    printf("\n");
+(gdb) n next
+50	}
+(gdb) next
+main () at demo5.c:27
 27	    printf("Array 2: ");
 (gdb) next
 28	    print_array(n, b);
+(gdb) next    ss step
+(gdb) ste[
+(gdb) step
+print_array (n=3, arr=0x61fecc) at demo5.c:46
+46	    for (int i = 0; i < n; i++) {
 (gdb) next
+47	        printf("%d ", arr[i]);
+(gdb) next
+46	    for (int i = 0; i < n; i++) {
+(gdb) next
+47	        printf("%d ", arr[i]);
+(gdb) next
+46	    for (int i = 0; i < n; i++) {
+(gdb) next
+47	        printf("%d ", arr[i]);
+(gdb) nes xt
+46	    for (int i = 0; i < n; i++) {
+(gdb) next
+49	    printf("\n");
+(gdb) next
+50	}
+(gdb) next
+main () at demo5.c:30
 30	    swap_array(n, a, b);
+(gdb) nex   ste[
+(gdb) n step
+swap_array (n=3, a=0x61fedc, b=0x61fecc) at demo5.c:52
+52	    for (int i = 0; i < n; i++) {
 (gdb) next
+53	        int temp = a[i];
+(gdb) next
+54	        a[i] = b[i];
+(gdb) next
+55	        b[i] = temp;
+(gdb) next
+52	    for (int i = 0; i < n; i++) {
+(gdb) next
+53	        int temp = a[i];
+(gdb) next
+54	        a[i] = b[i];
+(gdb) next
+55	        b[i] = temp;
+(gdb) next
+52	    for (int i = 0; i < n; i++) {
+(gdb) next
+53	        int temp = a[i];
+(gdb) nest
+(gdb) n next
+54	        a[i] = b[i];
+(gdb) next
+55	        b[i] = temp;
+(gdb) next
+52	    for (int i = 0; i < n; i++) {
+(gdb) next
+57	}
+(gdb) next
+main () at demo5.c:32
 32	    printf("After swapping:\n");
 (gdb) next
 33	    printf("Array 1: ");
@@ -70,9 +179,11 @@ $2 = 3
 39	}
 (gdb) next
 0x00401288 in ?? ()
+(gdb) next
+(gdb) next
 (gdb) quit
 A debugging session is active.
 
-	Inferior 1 [process 1272] will be killed.
+	Inferior 1 [process 10492] will be killed.
 
 Quit anyway? (y or n) y
