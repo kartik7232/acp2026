@@ -1,0 +1,58 @@
+GNU gdb (GDB) 16.3
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-w64-mingw32".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from demo7...
+(gdb) break main
+Breakpoint 1 at 0x40146e: file demo7.c, line 20.
+(gdb) run
+Starting program: D:\OneDrive\Desktop\acp2026\level1\demo7.exe 
+[New Thread 21496.0x5594]
+
+Thread 1 hit Breakpoint 1, main () at demo7.c:20
+20	    inputStrings(str1, str2);
+(gdb) next
+21	    int result = compareStrings(str1, str2);
+(gdb) step
+compareStrings (str1=0x61feea "chinmay", str2=0x61feb8 "adithya") at demo7.c:36
+36	    int cmp = strcmp(str1, str2);
+(gdb) next
+38	    if (cmp == 0){
+(gdb) next
+41	    else if(cmp>0)
+(gdb) next
+43	        return 1;
+(gdb) next
+49	}
+(gdb) next
+main () at demo7.c:22
+22	    output(result);
+(gdb) step
+output (result=1) at demo7.c:52
+52	    printf("result: %d", result);
+(gdb) next
+53	}
+(gdb) next
+main () at demo7.c:23
+23	    return 0;
+(gdb) next
+24	}
+(gdb) next
+0x00401288 in ?? ()
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 21496] will be killed.
+
+Quit anyway? (y or n) y

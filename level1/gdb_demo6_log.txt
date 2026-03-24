@@ -1,0 +1,120 @@
+GNU gdb (GDB) 16.3
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-w64-mingw32".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from demo6...
+(gdb) break main
+Breakpoint 1 at 0x40146e: file demo6.c, line 21.
+(gdb) run
+Starting program: D:\OneDrive\Desktop\acp2026\level1\demo6.exe 
+[New Thread 8904.0x50e4]
+
+Thread 1 hit Breakpoint 1, main () at demo6.c:21
+21	    printf("Enter number of elements: ");
+(gdb) print n
+$1 = 2699264
+(gdb) next
+22	    scanf("%d", &n);
+(gdb) next
+24	    if(n <= 0) {
+(gdb) next
+29	    arr = create_array(n);
+(gdb) ste[ p
+create_array (n=3) at demo6.c:51
+51	    return (int*) malloc (n * sizeof(int));
+(gdb) next
+52	}
+(gdb) next
+main () at demo6.c:31
+31	    if(arr == NULL) {
+(gdb) next
+36	    printf("Enter %d integers: \n", n);
+(gdb) next
+37	    initialize_array(arr, n);
+(gdb) step
+initialize_array (arr=0x7f1a20, n=3) at demo6.c:55
+55	    for (int i=0; i<n; i++)
+(gdb) next
+57	        scanf("%d", &arr[i]);
+(gdb) next
+55	    for (int i=0; i<n; i++)
+(gdb) next
+57	        scanf("%d", &arr[i]);
+(gdb) next
+55	    for (int i=0; i<n; i++)
+(gdb) next
+57	        scanf("%d", &arr[i]);
+(gdb) next
+55	    for (int i=0; i<n; i++)
+(gdb) next
+59	    printf("\n");
+(gdb) next
+60	}
+(gdb) next
+main () at demo6.c:39
+39	    printf("Array elements are: \n");
+(gdb) ne  print n
+$2 = 3
+(gdb) next
+40	    print_array(arr, n);
+(gdb) step
+print_array (arr=0x7f1a20, n=3) at demo6.c:63
+63	    for(int i=0; i<n; i++){
+(gdb) next
+64	        printf("%d ", arr[i]);
+(gdb) next
+63	    for(int i=0; i<n; i++){
+(gdb) next
+64	        printf("%d ", arr[i]);
+(gdb) print n
+$3 = 3
+(gdb) print
+$4 = 3
+(gdb) next
+63	    for(int i=0; i<n; i++){
+(gdb) next
+64	        printf("%d ", arr[i]);
+(gdb) next
+63	    for(int i=0; i<n; i++){
+(gdb) next
+66	    printf("\n");
+(gdb) next
+67	}
+(gdb) next
+main () at demo6.c:42
+42	    delete_array(&arr);
+(gdb) step
+delete_array (arr=0x61ff18) at demo6.c:70
+70	    free(*arr);
+(gdb) next
+71	    *arr = NULL;
+(gdb) next
+72	}
+(gdb) next
+main () at demo6.c:44
+44	    if(arr == NULL)
+(gdb) next
+45	        printf("\nMemory successfully freed and pointer set to NULL.");
+(gdb) prin    print
+$5 = 3
+(gdb) next
+47	    return 0;
+(gdb) next
+48	}
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 8904] will be killed.
+
+Quit anyway? (y or n) y
